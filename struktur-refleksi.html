@@ -1,0 +1,54 @@
+<div class="card">
+    <h1 class="app-title">Refleksi Nama & Kecocokan Pasangan</h1>
+    <!-- Tab Navigasi -->
+    <div class="tabs">
+      <button onclick="switchTab('refleksi')" id="tab-refleksi" class="tab-btn active">Refleksi Nama</button>
+      <button onclick="switchTab('pasangan')" id="tab-pasangan" class="tab-btn">Kecocokan Pasangan</button>
+    </div>
+    <!-- Form Refleksi Nama -->
+    <div id="section-refleksi">
+      <div class="form-group">
+        <label class="form-label">Masukkan Nama Lengkap</label>
+        <input type="text" id="inputNamaRefleksi" oninput="filterInputRealtime(this)" placeholder="Contoh: Budi Santoso" class="form-input">
+      </div>
+      <!-- Opsi Jenis Kelamin -->
+      <div class="form-group">
+        <label class="form-label-uppercase">Pilih Jenis Kelamin Sesuai Nama</label>
+        <div class="gender-grid">
+          <label class="gender-option">
+            <input type="radio" name="genderRefleksi" value="pria">
+            <span style="font-size: 0.875rem; font-weight: 600;">Laki-laki</span>
+          </label>
+          <label class="gender-option">
+            <input type="radio" name="genderRefleksi" value="wanita">
+            <span style="font-size: 0.875rem; font-weight: 600;">Perempuan</span>
+          </label>
+        </div>
+      </div>
+      <button id="btn-proses-refleksi" onclick="jalankanRefleksi()" class="btn-primary">Proses Refleksi</button>
+    </div>
+    <!-- Form Kecocokan Pasangan -->
+    <div id="section-pasangan" class="hidden">
+      <div class="form-group">
+        <label class="form-label">Nama Pria</label>
+        <input type="text" id="inputNamaPria" oninput="filterInputRealtime(this)" placeholder="Contoh: Budi Santoso" class="form-input">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Nama Wanita</label>
+        <input type="text" id="inputNamaWanita" oninput="filterInputRealtime(this)" placeholder="Contoh: Siti Aminah" class="form-input">
+      </div>
+      <button id="btn-proses-pasangan" onclick="jalankanPasangan()" class="btn-primary">Cek Kecocokan</button>
+    </div>
+    <!-- Kotak Pesan Error -->
+    <div id="boxError" class="error-box hidden">
+      <span id="pesanError">Terjadi kesalahan</span>
+      <button onclick="tutupError()" class="btn-close-error">&times;</button>
+    </div>
+    <!-- Loading State -->
+    <div id="loading" class="loading-box hidden">
+      <div class="spinner"></div>
+      <p class="loading-text">Sedang memproses data ke server...</p>
+    </div>
+    <!-- Area Hasil Output -->
+    <div id="hasilContainer" class="results-container hidden"></div>
+  </div>
