@@ -97,7 +97,7 @@ function renderRefleksi(t) {
     <div class="refleksi-summary">
       <div>
         <p style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">Nama Bersih (${labelGender})</p>
-        <p style="font-weight: 700; font-size: 1.025rem; margin-top: 10px; text-transform: capitalize; 10px; color: #4338ca; letter-spacing: 0.025em;">${e.namaBersih}</p>
+        <p style="font-weight: 700; font-size: 1.025rem; margin-top: 10px; text-transform: capitalize; color: #4338ca; letter-spacing: 0.025em;">${e.namaBersih}</p>
       </div>
       <div class="stat-grid-3">
         <div>
